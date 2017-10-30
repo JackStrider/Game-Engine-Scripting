@@ -4,9 +4,27 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    //Step 1: Declare variables
+    private AudioSource audioSource;
+    private BoxCollider2D boxCollider2D;
+    private SpriteRenderer spriteRenderer;
+    private void Start()
     {
+        //Step 2: Initalise variables
+        audioSource = GetComponent<AudioSource>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {   
         Debug.Log("Coin touched!");
-        Destroy(gameObject);
+        audioSource.Play();
+        boxCollider2D.enabled = false;
+        spriteRenderer.enabled = false;
+
+        float length = audioSource.clip.length + 0.2f;
+
+        Destroy(gameObject, length);
     }
 }

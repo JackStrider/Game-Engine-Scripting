@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour {
 
     bool doubleJump = false;
 
+
+   // public AudioSource = AudioSource;
+
 	// Use this for initialization
 	void Start ()
     {
