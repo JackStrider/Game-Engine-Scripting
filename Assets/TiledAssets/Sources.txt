@@ -1,2 +1,0 @@
-Clouds: https://opengameart.org/content/clouds
-Background: https://opengameart.org/content/generic-platformer-tileset-16x16-background

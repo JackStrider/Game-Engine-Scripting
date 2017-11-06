@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--Tiled2Unity generated xml data-->
 <!--Do not modify by hand-->
-<!--Last exported: 10/30/2017 2:33:27 PM-->
+<!--Last exported: 11/6/2017 2:34:48 PM-->
 <Tiled2Unity version="1.0.13.0">
   <AssignMaterial mesh="Testmap_mesh_0001" material="Background" />
   <AssignMaterial mesh="Testmap_mesh_0002" material="ForestSheet" />
@@ -18,12 +18,7 @@
       <GameObject name="Collision">
         <PolygonCollider2D>
           <Path>1,-47 1,-34 0,-34 0,-47</Path>
-          <Path>55,-50 56,-50 56,-40 71,-40 71,-39 55,-39</Path>
-          <Path>46,-50 46,-43 50,-43 50,-50 51,-50 51,-42 45,-42 45,-50</Path>
-          <Path>36,-50 36,-45 39,-45 39,-50 40,-50 40,-44 35,-44 35,-50</Path>
-          <Path>30,-50 30,-47 31,-47 31,-50 32,-50 32,-46 29,-46 29,-50</Path>
-          <Path>17,-50 17,-48 25,-48 25,-50 26,-50 26,-47 16,-47 16,-50</Path>
-          <Path>12,-50 12,-47 1,-47 1,-48 11,-48 11,-50</Path>
+          <Path>17,-50 17,-48 25,-48 25,-50 30,-50 30,-47 31,-47 31,-50 36,-50 36,-45 39,-45 39,-50 46,-50 46,-43 50,-43 50,-50 56,-50 56,-40 71,-40 71,-39 55,-39 55,-49 51,-49 51,-42 45,-42 45,-49 40,-49 40,-44 35,-44 35,-49 32,-49 32,-46 29,-46 29,-49 26,-49 26,-47 16,-47 16,-49 12,-49 12,-47 1,-47 1,-48 11,-48 11,-50</Path>
         </PolygonCollider2D>
       </GameObject>
     </GameObject>
