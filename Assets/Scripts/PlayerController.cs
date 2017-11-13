@@ -21,14 +21,15 @@ public class PlayerController : MonoBehaviour {
     bool doubleJump = false;
     public bool DoubleJumpItem = false;
 
-    // public AudioSource = AudioSource;
+    private AudioSource audioSource;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         anim = GetComponent<Animator>();
         myRigidBody2D = GetComponent<Rigidbody2D>();
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate ()
@@ -43,7 +44,6 @@ public class PlayerController : MonoBehaviour {
             doubleJump = true;        
 
         anim.SetFloat("vSpeed", myRigidBody2D.velocity.y);
-
 
         float move = Input.GetAxis("Horizontal");
 
@@ -63,9 +63,13 @@ public class PlayerController : MonoBehaviour {
         {
                 anim.SetBool("Ground", false);
                 myRigidBody2D.AddForce(new Vector2(0, jumpForce));
-            
-                if (!doubleJump && !grounded)
-                    doubleJump = true;            
+                audioSource.Play();
+
+            if (!doubleJump && !grounded)
+            {
+                doubleJump = true;
+                audioSource.Play();
+            }
         }
     }
 
