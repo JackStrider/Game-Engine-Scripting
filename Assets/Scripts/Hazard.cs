@@ -7,9 +7,15 @@ public class Hazard : MonoBehaviour {
 
     private AudioSource audioSource;
 
+    [SerializeField]
+    int deathDelay;
+
+    Animator anim;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        anim = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -17,7 +23,14 @@ public class Hazard : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             audioSource.Play();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(Death());         
         }
+    }
+
+    IEnumerator Death()
+    {
+        anim.SetTrigger("Death");
+        yield return new WaitForSeconds(deathDelay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

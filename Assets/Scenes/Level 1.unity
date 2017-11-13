@@ -504,6 +504,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1320943498440128, guid: 5e1d013ea55e00543aa9dc3494f5bd82, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 60380937609735920, guid: 5e1d013ea55e00543aa9dc3494f5bd82,
+        type: 2}
+      propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e1d013ea55e00543aa9dc3494f5bd82, type: 2}
   m_IsPrefabParent: 0
@@ -674,6 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f003991ac4d95524b9f7cb901ce12ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathDelay: 2
 --- !u!61 &1126586714
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -943,6 +953,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2068432464 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1320943498440128, guid: 5e1d013ea55e00543aa9dc3494f5bd82,
+    type: 2}
+  m_PrefabInternal: {fileID: 718887557}
+--- !u!251 &2068432466
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068432464}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 0
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &2122121849
 GameObject:
   m_ObjectHideFlags: 0
