@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour {
     public float jumpForce = 700;
 
     bool doubleJump = false;
+    public bool DoubleJumpItem = false;
 
-
-   // public AudioSource = AudioSource;
+    // public AudioSource = AudioSource;
 
 	// Use this for initialization
 	void Start ()
@@ -39,6 +39,9 @@ public class PlayerController : MonoBehaviour {
         if (grounded)
             doubleJump = false;
 
+        if (DoubleJumpItem == false)
+            doubleJump = true;        
+
         anim.SetFloat("vSpeed", myRigidBody2D.velocity.y);
 
 
@@ -55,14 +58,14 @@ public class PlayerController : MonoBehaviour {
 	}
 
     void Update()
-    {
+    {       
         if((grounded || !doubleJump) && Input.GetKeyDown(KeyCode.Space))
         {
-            anim.SetBool("Ground", false);
-            myRigidBody2D.AddForce(new Vector2(0, jumpForce));
-
-            if (!doubleJump && !grounded)
-                doubleJump = true;
+                anim.SetBool("Ground", false);
+                myRigidBody2D.AddForce(new Vector2(0, jumpForce));
+            
+                if (!doubleJump && !grounded)
+                    doubleJump = true;            
         }
     }
 
